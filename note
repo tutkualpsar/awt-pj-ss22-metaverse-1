@@ -1,0 +1,75 @@
+      <a-sky
+        src="https://cdn.glitch.global/d0d42db1-8c7b-4c92-a76e-bdbd58c8fa8e/29221326967_ec034ea62a_o.jpg?v=1657196543014"
+      ></a-sky>
+      
+       <a-asset-item
+          id="floor"
+          src="https://cdn.glitch.global/d0d42db1-8c7b-4c92-a76e-bdbd58c8fa8e/TexturesCom_FloorsMarble0020_1_M.jpg?v=1657359041969"
+        >
+        </a-asset-item>
+        
+        
+        
+        
+        
+        
+        
+        
+        <!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+
+      <a-assets>
+
+         <a-asset-item
+          id1 = "room"
+          src1="https://cdn.glitch.global/d0d42db1-8c7b-4c92-a76e-bdbd58c8fa8e/29221326967_ec034ea62a_o.jpg?v=1657196543014"             
+                       
+          id="floor"
+          src="https://cdn.glitch.global/d0d42db1-8c7b-4c92-a76e-bdbd58c8fa8e/TexturesCom_FloorsMarble0020_1_M.jpg?v=1657359041969">
+        </a-asset-item>
+
+      </a-assets>
+
+       <a-sky
+        
+      ></a-sky>
+      
+      <a-entity gltf-model="room"  rotation="-90 0 0" width="30" height="30"
+      >
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
+
+
+
+
+       <a-sky
+        src="https://cdn.glitch.global/d0d42db1-8c7b-4c92-a76e-bdbd58c8fa8e/29221326967_ec034ea62a_o.jpg?v=1657196543014"
+      ></a-sky>
+      
+      
+      
+        <img
+          id="clinic"
+          crossorigin="anonymous"
+          src="https://cdn.glitch.global/d0d42db1-8c7b-4c92-a76e-bdbd58c8fa8e/clinic.jpg?v=1657381450273"
+        />     
+      <!-- clinic -->
+      <a-entity id="clinic1" position="200000000 0 0">
+        <a-sky src="#clinic"> </a-sky>
+      </a-entity>  
+      
+            <a-link
+        position="-2.5 1.6 -4"
+        href="/metaverse1/0600-portals-02.html"
+        title="Go to second environment"
+      ></a-link>    
+      
+      <a-sphere radius="500" side="back" src="#cleanroom"></a-sphere>
