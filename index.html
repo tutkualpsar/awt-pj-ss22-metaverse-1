@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>metaverse</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-webcentric-component@0.1.0/dist/aframe-webcentric-component.min.js"></script>
+    <script src="../js/livecode.js"></script>
+  </head>
+  <body>
+    <a-scene webcentric>
+      <a-assets>
+        <img
+          id="cleanroom"
+          crossorigin="anonymous"
+          src="https://cdn.glitch.me/d0d42db1-8c7b-4c92-a76e-bdbd58c8fa8e/optical-cleanroom.jpg?v=1657375590714"
+        />
+        <img
+          id="arrow"
+          crossorigin="anonymous"
+          src="https://cdn.glitch.global/d0d42db1-8c7b-4c92-a76e-bdbd58c8fa8e/arrow.png?v=1657384258881"
+        />
+        <img
+          id="waiting room"
+          crossorigin="anonymous"
+          src="https://cdn.glitch.global/d0d42db1-8c7b-4c92-a76e-bdbd58c8fa8e/waiting%20room.jpg?v=1657380865703"
+        />
+        <img
+          id="room"
+          crossorigin="anonymous"
+          src="https://cdn.glitch.global/d0d42db1-8c7b-4c92-a76e-bdbd58c8fa8e/room.jpg?v=1657196543014"
+        />
+
+        <a-asset-item
+          id="joyce"
+          src="https://cdn.glitch.global/d0d42db1-8c7b-4c92-a76e-bdbd58c8fa8e/joyce.glb?v=1657400250051"
+        ></a-asset-item>
+        <a-asset-item
+          id="receptionist"
+          src="https://cdn.glitch.global/d0d42db1-8c7b-4c92-a76e-bdbd58c8fa8e/receptionist.glb?v=1657401002889"
+        ></a-asset-item>
+        <a-asset-item
+          id="doctor"
+          src="https://raw.githubusercontent.com/Liyingfish/Metaversemodel/main/doctor_pinch/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="sittingali"
+          src="https://raw.githubusercontent.com/Liyingfish/Metaversemodel/main/ali_sitting_clinic_03/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="docchair"
+          src="https://raw.githubusercontent.com/Liyingfish/Metaversemodel/main/officechair/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item id="docinclinic" src=""></a-asset-item>
+        <a-asset-item
+          id="womandoctor"
+          src="https://raw.githubusercontent.com/Liyingfish/Metaversemodel/main/woman_doctor/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="curtain"
+          src="https://raw.githubusercontent.com/tutkualpsar/Metaverse-Objects/main/hospital_curtain/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="hospitalbed"
+          src="https://cdn.glitch.me/d0d42db1-8c7b-4c92-a76e-bdbd58c8fa8e/bed.glb?v=1657628420464"
+        ></a-asset-item>
+        <a-asset-item
+          id="monitor"
+          src="https://raw.githubusercontent.com/tutkualpsar/Metaverse-Objects/main/medical_monitor/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="desk"
+          src="https://raw.githubusercontent.com/tutkualpsar/Metaverse-Objects/main/desk_low-poly/scene.gltf"
+        ></a-asset-item>
+      </a-assets>
+
+      <!-- waiting room -->
+      <a-entity id="waitingroom1" position="0 0 0">
+        <a-sky src="#waiting room"> </a-sky>
+        <a-entity class="hotstpotHeading" position="22.010 -0.890 9.500">
+          <a-link
+            href="#cameraPos=10000,0,0"
+            link="visualAspectEnabled:false"
+            position="-30.925 -15.625 60.814"
+            rotation="0 0 45"
+            scale="40 25 30"
+            src="#arrow"
+          >
+            <a-image src="#arrow"> </a-image>
+          </a-link>
+        </a-entity>
+        <a-entity
+          gltf-model="#joyce"
+          position="-33.515, -32.849, -54.999"
+          rotation="0, 50, 0"
+          scale="20, 20, 20"
+        ></a-entity>
+        <a-entity
+          gltf-model="#receptionist"
+          position="18.013, -32.936, 63.675"
+          rotation="0, 220.010, 0"
+          scale="20, 20, 20"
+        ></a-entity>
+        <a-gltf-model
+          position="-24.075, -94.263, 254.144"
+          rotation="0, 180.000, 0"
+          scale="70.000, 70.000, 70.000"
+          src="#sittingali"
+        ></a-gltf-model>
+      </a-entity>
+
+      <!-- clinic -->
+      <a-entity id="clinicroom" position="10000 0 0">
+        <a-sky src="#room"> </a-sky>
+        <a-entity class="hotstpotHeading" rotation="-3.438 -129.259 0.000">
+          <a-link
+            href="#cameraPos=20000,0,0"
+            link="visualAspectEnabled:false"
+            position="22 -3 -29.5"
+            rotation="0 90 0"
+            scale="20 20 20"
+            src="#arrow"
+          >
+            <a-image src="#arrow"> </a-image>
+          </a-link>
+          <a-gltf-model
+            position="-325.886, -217.746, -146.979"
+            rotation="0, 90.000, 0"
+            scale="150.010, 150.010, 150.010"
+            src="#docchair"
+          ></a-gltf-model>
+
+          <a-gltf-model
+            position="-196.777, -209.492, -159.252"
+            rotation="-2.651 166.978 -1.784"
+            scale="0.5 0.5 0.5 "
+            src="#desk"
+          ></a-gltf-model>
+          <a-gltf-model
+            position="282.662, -196.859, 274.778"
+            rotation="0.536 112.611 -0.587"
+            scale="2.5 2.5 2.5 "
+            src="#monitor"
+          ></a-gltf-model>
+        </a-entity>
+
+        <a-gltf-model
+          position="158.758, -270.509, -360.932"
+          rotation="0, -47.406, 0"
+          scale="180.000, 180.000, 180.000"
+          src="#womandoctor"
+        ></a-gltf-model>
+
+        <a-gltf-model
+          position="-182.638, -270.519, -214.007"
+          rotation="0, -154.925, 0"
+          scale="80 80 80"
+          src="#curtain"
+        ></a-gltf-model>
+
+        <a-gltf-model
+          position="-331.763, -158.197, -41.244"
+          rotation="0, 111.271, 0"
+          scale="0.8 0.8 0.8"
+          src="#hospitalbed"
+        ></a-gltf-model>
+      </a-entity>
+
+      <!-- cleanroom -->
+      <a-entity id="cleanroom1" position="20000 0 0">
+        <a-sky src="#cleanroom"> </a-sky>
+        <a-entity class="hotstpotHeading" position="10 0 0" rotation="0 90 45">
+          <a-link
+            href="#cameraPos=0,0,0"
+            link="visualAspectEnabled:false"
+            position="3.566 -5.749 -8.798"
+            rotation="0 90 45"
+            scale="8 6 7"
+            src="#arrow"
+          >
+            <a-image src="#arrow"> </a-image>
+          </a-link>
+          <a-gltf-model
+            position="-93.772 -371.091 154.580"
+            rotation="0 180 45"
+            scale="3 2.5 3"
+            src="#doctor"
+          ></a-gltf-model>
+        </a-entity>
+      </a-entity>
+
+      <a-entity id="cameraRig">
+        <a-camera id="camera" wasd-controls-enabled="false"
+          ><a-cursor></a-cursor
+        ></a-camera>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
